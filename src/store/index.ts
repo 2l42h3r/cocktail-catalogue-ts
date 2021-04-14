@@ -1,11 +1,14 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+import { recentlyVisited } from '@/store/recentlyVisited'
+
+Vue.use(Vuex)
 
 export default new Vuex.Store({
+  strict: process.env.NODE_ENV !== 'production',
   state: {},
   mutations: {},
   actions: {},
-  modules: {},
-});
+  modules: { recentlyVisited },
+})

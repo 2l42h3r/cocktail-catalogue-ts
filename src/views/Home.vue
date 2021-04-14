@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <article class="text-center w-full">
+    <CocktailCard :random="true" class="mt-16 m-auto" />
+  </article>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import Vue from 'vue'
+import CocktailCard from '@/components/CocktailCard.vue'
 
 export default Vue.extend({
-  name: "Home",
+  name: 'Home',
   components: {
-    HelloWorld,
+    CocktailCard,
   },
-});
+  metaInfo: {
+    title: 'The Cocktail Catalogue',
+    titleTemplate: undefined,
+  },
+})
 </script>
